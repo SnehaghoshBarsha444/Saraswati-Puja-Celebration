@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('maa.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    transition: background-color linear 5s;
+    overflow-x: hidden;
+}
+
+.loading {
+    position: fixed;
+    z-index: 99999;
+    height: 2em;
+    width: 2em;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.loading:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.loading:not(:required) {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.loading:not(:required):after {
+    content: '';
+    display: block;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    margin-top: -0.5em;
+    animation: spinner 1500ms infinite linear;
+    border-radius: 0.5em;
+    box-shadow: #FFF 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, #FFF -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+} 
+
+/* Animation */
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.peach {
+    background-color: #FFDAB9;
+}
+
+.peach-after {
+    animation: peach_alive linear 8s infinite;
+}
+
+@keyframes peach_alive {
+    0% { background-color: #FFDAB9; }
+    25% { background-color: #FFE4B5; }
+    50% { background-color: #FFDAB9; }
+    75% { background-color: #FFEFD5; }
+    100% { background-color: #FFDAB9; }
+}
+
+/* Button Styles */
+.btn-primary {
+    border-color: #466baf;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: 'Signika', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background-color: #466baf;
+    margin: 5px; /* Add margin to maintain spacing between buttons */
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    border-color: #fff;
+    color: #fff;
+    background-color: #466baf;
+}
+
+/* Specific styles for the Devi Maa button */
+#maa_coming {
+    background-color: #FFCC00; /* Change background color for visibility */
+    color: #000; /* Change text color for contrast */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 720px) {
+    .container {
+        transform: scale(0.9);
+    }
+}
+
+/* Balloon Styles */
+.balloons {
+    position: fixed;
+    bottom: -200px;
+    opacity: 0.6;
+    z-index: 99;
+    width: 100px;
+    height: 183px;
+    background-repeat: no-repeat;
+    background-size: 100px 183px;
+}
+
+.balloons h2 {
+    text-transform: uppercase;
+    font-family: 'Signika', sans-serif;
+    font-size: 50px;
+    color: #BF4136;
+    text-shadow: 5px 5px 5px #FFF;
+    display: none;
+}
+
+/* Additional styles for bulbs and animations */
+.bulb {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    background-size: 50px 50px;
+}
+
+/* Add your bulb glow styles here as needed */
+
+.navbar .row {
+    display: flex;
+    flex-direction: column; /* or row, depending on your layout */
+    align-items: center; /* Center the buttons */
+}
+
+/* Additional styles for buttons */
+.navbar .btn {
+    flex: 1; /* Allow buttons to grow equally */
+    margin: 5px; /* Maintain spacing */
+}
