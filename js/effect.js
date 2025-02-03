@@ -119,9 +119,39 @@ $('document').ready(function(){
 	
 		// Fade out the button and show the next button
 		$(this).fadeOut('slow').promise().done(function() {
-			$('#aradhana').fadeIn('slow');
+			$('#ghat').fadeIn('slow');
 		});
 	});
+
+    $('#ghat').click(function() {
+        // Create a div element to hold the ghat image
+        var ghatContainer = $('<div>', {
+            class: 'ghat-container', // Add a class for styling
+            style: 'display: flex; justify-content: center; align-items: center; margin-top: 20px;' // Flexbox for alignment
+        });
+
+        // Create an image element and set its attributes
+        var img = $('<img>', {
+            src: 'ghat.png', // Path to the image
+            width: '30%', // Set the width
+            class: 'ghat', // Add a class for styling
+            align: 'center'
+        });
+
+        // Append the image to the container
+        ghatContainer.append(img);
+
+        // Append the container to the body or a specific container
+        $('body').append(ghatContainer);
+
+        // Fade in the image
+        ghatContainer.fadeIn('slow');
+
+        // Fade out the button and show the next button
+        $(this).fadeOut('slow').promise().done(function() {
+            $('#aradhana').fadeIn('slow');
+        });
+    });
 
 	$('#aradhana').click(function() {
 		// Create a div element to hold the diya images
