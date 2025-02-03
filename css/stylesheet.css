@@ -1080,7 +1080,7 @@ audio {
 	bottom: 0;
 	padding:10px 0px 10px 0px;
 }
-#play,#bannar_coming,#maa_coming,#aradhana,#story {
+#play,#bannar_coming,#maa_coming,#ghat,#aradhana,#story {
 	display: none;
 }
 
@@ -1123,4 +1123,11 @@ audio {
 
 .diya {
     margin: 0 10px; /* Add space between the images */
+}
+
+.ghat-container {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    margin-top: 20px; /* Add some space above the image */
 }
